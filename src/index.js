@@ -23,16 +23,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
   req.context = {
     models,
-    me: models.users[1],
   };
   next();
 });
 
 // * Routes * //
 
-app.use('/session', routes.session);
-app.use('/users', routes.user);
-app.use('/messages', routes.message);
+app.use('/products', routes.products);
+app.use('/banners', routes.banners);
+app.use('/addToCart', routes.addToCart);
+app.use('/categories', routes.categories);
+
 
 // * Start * //
 

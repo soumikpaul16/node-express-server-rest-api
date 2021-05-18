@@ -1,9 +1,11 @@
-import session from './session';
-import user from './user';
-import message from './message';
+import products from './products';
+import categories from './categories';
+import addToCart from './addToCart';
+import banners from './banners';
 
 export default {
-  session,
-  user,
-  message,
+  products,
+  banners,
+  addToCart,
+  categories,
 };

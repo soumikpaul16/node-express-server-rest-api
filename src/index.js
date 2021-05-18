@@ -4,6 +4,9 @@ import express from 'express';
 
 import models from './models';
 import routes from './routes';
+import { Router } from 'express';
+
+const router = Router();
 
 const app = express();
 
@@ -29,11 +32,16 @@ app.use((req, res, next) => {
 
 // * Routes * //
 
+app.use(
+  '',
+  router.get('/', (req, res) => {
+    return res.send('success');
+  }),
+);
 app.use('/products', routes.products);
 app.use('/banners', routes.banners);
 app.use('/addToCart', routes.addToCart);
 app.use('/categories', routes.categories);
-
 
 // * Start * //
 

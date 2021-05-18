@@ -1,9 +1,8 @@
-import 'dotenv/config';
 import cors from 'cors';
 import express from 'express';
 
-import models from './models';
-import routes from './routes';
+import models from './models/index';
+import routes from './routes/index';
 import { Router } from 'express';
 
 const router = Router();
@@ -45,6 +44,6 @@ app.use('/categories', routes.categories);
 
 // * Start * //
 
-app.listen(process.env.PORT, () =>
-  console.log(`Example app listening on port ${process.env.PORT}!`),
+app.listen(3000, () =>
+  console.log(`Example app listening on port 3000!`),
 );

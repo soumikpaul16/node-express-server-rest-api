@@ -1,5 +1,6 @@
 import cors from 'cors';
 import express from 'express';
+import 'dotenv/config';
 
 import models from './models/index';
 import routes from './routes/index';
@@ -44,6 +45,6 @@ app.use('/categories', routes.categories);
 
 // * Start * //
 
-app.listen(3000, () =>
+app.listen(process.env.PORT, () =>
   console.log(`Example app listening on port 3000!`),
 );
